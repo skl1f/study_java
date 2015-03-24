@@ -19,6 +19,13 @@ public class Main{
         int[] result = Sorting.mergeSort(data,data2);
         System.out.println("----Merged arrays:");
         System.out.println(Arrays.toString(result));
+        Sorting.reverse(data);
+        System.out.println("State before selection sort:");
+        Sorting.reverse(result);
+        System.out.println(Arrays.toString(result));
+        System.out.println("Selection sort:");
+        Sorting.selectionSort(result);
+        System.out.println(Arrays.toString(result));
     }
 
 }

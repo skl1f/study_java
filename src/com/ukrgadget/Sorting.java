@@ -58,6 +58,19 @@ public class Sorting {
             return mergedArray;
         }
 
+        public static void selectionSort (int[] data){
+            for (int index = 0; index < data.length -1; index++){
+               int currentElementIndex = index;
+               int currentElement = data[index];
+                   for (int i = index; i < data.length;i++){
+                       if (currentElement > data[i]) {
+                           currentElementIndex = i;
+                       }
+                   }
+                swap(data,currentElementIndex, index);
+            }
+        }
+
         private static void swap(int[] array, int one, int two) {
             int tmp = array[one];
             array[one] = array[two];
