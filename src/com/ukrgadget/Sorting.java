@@ -2,7 +2,7 @@ package com.ukrgadget;
 
 /**
  * Created by skl1f on 24.03.15.
- * Sorting {asc,desc,reverse} elements in array
+ * Sorting {asc,desc,reverse, merge, selection} elements in array
  */
 
 public class Sorting {
