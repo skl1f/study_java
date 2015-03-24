@@ -26,6 +26,10 @@ public class Main{
         System.out.println("Selection sort:");
         Sorting.selectionSort(result);
         System.out.println(Arrays.toString(result));
+        int[] data3 = {1,3,4,325,235,15,7,257,0,0,4,4,6};
+        System.out.println("Array before insertion sorting:\n"+ Arrays.toString(data3));
+        Sorting.insertionSort(data3);
+        System.out.println("Array after insertion sorting: \n"+ Arrays.toString(data3));
     }
 
 }

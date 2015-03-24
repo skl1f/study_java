@@ -71,6 +71,18 @@ public class Sorting {
             }
         }
 
+        public static void insertionSort (int[] numbers){
+            for (int i = 1; i < numbers.length; i++) {
+                int copyNumber = numbers[i];
+                int j = i;
+                while (j > 0 && copyNumber < numbers[j - 1]){
+                    numbers[j] = numbers[j - 1];
+                    j--;
+                }
+                numbers[j] = copyNumber;
+            }
+        }
+
         private static void swap(int[] array, int one, int two) {
             int tmp = array[one];
             array[one] = array[two];
