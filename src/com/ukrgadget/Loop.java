@@ -5,7 +5,7 @@ package com.ukrgadget;
  * Sorting {asc,desc,reverse, merge, selection} elements in array
  */
 
-public class Sorting {
+public class Loop {
 
         public static void sortDesc(int[] data) {
             for (int border = data.length; border > 0; --border) {
