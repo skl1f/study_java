@@ -2,7 +2,7 @@ package com.ukrgadget;
 
 /**
  * Created by skl1f on 24.03.15.
- * Bubble Sorting {asc,desc,reverse} elements in array
+ * Sorting {asc,desc,reverse} elements in array
  */
 
 public class Sorting {
@@ -29,16 +29,35 @@ public class Sorting {
 
         public static void reverse (int[] data){
             for (int i = 0; i < data.length/2; i++){
-                swapForReverse(data, i);
+                swap(data, i, data.length - 1 - i);
             }
         }
 
-        private static void swapForReverse(int[] data, int i) {
-            int tmp = data[i];
-            data[i] = data[data.length - 1 - i];
-            data[data.length - 1 - i] = tmp;
+        public static int[] mergeSort(int[] one, int[] second){
+            // Both of arrays should be sorted
+            int[] mergedArray = new int[one.length + second.length];
+            int lastIndexOne = 0;
+            int lastIndexSecond = 0;
+
+            while (lastIndexOne < one.length && lastIndexSecond < second.length) {
+                if (one[lastIndexOne] < second[lastIndexSecond]) {
+                    mergedArray[lastIndexOne + lastIndexSecond] = one[lastIndexOne++];
+                } else {
+                    mergedArray[lastIndexOne + lastIndexSecond] = second[lastIndexSecond++];
+                }
+            }
+            if (lastIndexOne == one.length) {
+                for (; lastIndexSecond < second.length;){
+                    mergedArray[lastIndexOne + lastIndexSecond] = second[lastIndexSecond++];
+                }
+            } else {
+                for (; lastIndexOne < one.length;){
+                    mergedArray[lastIndexOne + lastIndexSecond] = one[lastIndexOne++];
+                }
+            }
+            return mergedArray;
         }
-    
+
         private static void swap(int[] array, int one, int two) {
             int tmp = array[one];
             array[one] = array[two];
