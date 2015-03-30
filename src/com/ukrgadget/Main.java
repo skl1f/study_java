@@ -32,7 +32,7 @@ public class Main{
         System.out.println("Array after insertion sorting: \n" + Arrays.toString(data3));
 
         System.out.println("Recursion test");
-        System.out.println(Recursion.fib(60));
+        System.out.println(Recursion.fib(100));
     }
 
 }
