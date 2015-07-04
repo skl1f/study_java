@@ -40,7 +40,7 @@ public class task2 {
 
         while (i != Byte.MAX_VALUE)
         {
-            if (minByte < i)
+            if (minByte > i)
                 minByte = i;
             else {
                 i++;
