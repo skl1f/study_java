@@ -67,4 +67,5 @@ public class task2 {
 
         System.out.println("Min char: " + minChar + " | Max char: " + maxChar);
     }
+
 }

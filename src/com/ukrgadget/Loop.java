@@ -8,10 +8,16 @@ package com.ukrgadget;
 public class Loop {
 
         public static void sortDesc(int[] data) {
-            for (int border = data.length; border > 0; --border) {
-                for (int index = border - 1; index > 0; index--) {
-                    if (data[index - 1] < data[index]) {
-                        swap(data, index, index - 1);
+            int temp;
+            for (int i = 0; i < data.length - 1; i++)
+            {
+                for (int j = 1; j < data.length - i; j++)
+                {
+                    if (data[j - 1] < data[j])
+                    {
+                        temp = data[j - 1];
+                        data[j - 1] = data[j];
+                        data[j] = temp;
                     }
                 }
             }
@@ -26,6 +32,8 @@ public class Loop {
                 }
             }
         }
+
+
 
         public static void reverse (int[] data){
             for (int i = 0; i < data.length/2; i++){
